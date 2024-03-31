@@ -46,7 +46,7 @@ const ButtonImg = styled.img`
 `;
 
 interface UpdateBtnListProps {
-  selectedFolderId: string;
+  selectedFolderId: string | number;
   selectedFolderName: string;
 }
 
