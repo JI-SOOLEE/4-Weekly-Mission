@@ -10,7 +10,7 @@ const SNS_ITEMS = [
     name: 'facebook',
     address: 'https://www.facebook.com/',
     imgUrl: '/assets/facebook.svg',
-    //기존 react에서 사용하던 이미지를 import해오던 형식이 적용이 안돼서 경로로 넣어줬는데 왜 안되는지 이유를 모르겠습니다...
+    //기존 react에서 사용하던 이미지를 import해오던 방식이 적용이 안돼서 경로를 직접 넣어줬는데 왜 import 방식이 안되는지 이유를 모르겠습니다...
   },
   {
     name: 'twitter',
