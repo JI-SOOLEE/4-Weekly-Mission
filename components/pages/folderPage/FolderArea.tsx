@@ -4,7 +4,9 @@ import LinkList from '@/components/pages/folderPage/LinkList';
 import { totalFolderId } from '@/util/constants';
 
 const FolderArea = () => {
-  const [selectedFolderId, setSelectedFolderId] = useState(totalFolderId);
+  const [selectedFolderId, setSelectedFolderId] = useState<string | number>(
+    totalFolderId
+  );
 
   const handleFolderNameClick = (id: string | number) => {
     setSelectedFolderId(id);
