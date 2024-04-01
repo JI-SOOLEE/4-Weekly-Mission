@@ -32,7 +32,7 @@ const Input = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>이메일</label>
       <input
-        type='email'
+        type='text'
         {...register('email', {
           required: '이메일을 입력해주세요.',
           pattern: {
@@ -42,7 +42,7 @@ const Input = () => {
         })}
         placeholder='이메일을 입력해주세요.'
       />
-      {errors.email?.type === 'pattern' && <p>{errors.email.message}</p>}
+      {errors.email && <p>{errors.email.message}</p>}
 
       <label>비밀번호</label>
       <input type={inputType} {...register('password', { required: true })} />
