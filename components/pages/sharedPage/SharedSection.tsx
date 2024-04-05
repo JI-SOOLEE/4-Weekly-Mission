@@ -29,8 +29,8 @@ const SharedSection = () => {
       } = await getSampleFolder();
       setFolderList(links);
     } catch (error) {
-      const err = error as SystemError;
-      console.log(err.message);
+      const err = error as Error;
+      console.error(err.message);
     }
   };
 
