@@ -1,5 +1,4 @@
 import { Folder, FolderAPI, Link, LinkAPI, User } from '@/types/api';
-import { SystemError } from '@/types/err';
 import { totalFolderId } from '@/util/constants';
 
 const BASE_URL = 'https://bootcamp-api.codeit.kr/api';

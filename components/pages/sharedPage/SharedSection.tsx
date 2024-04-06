@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { getSampleFolder } from '@/apis/api';
 import SearchBar from '@/components/common/SearchBar';
 import FolderList from '@/components/pages/sharedPage/FolderList';
-import { SystemError } from '@/types/err';
 
 const SharedArea = styled.section`
   margin: 0 auto;

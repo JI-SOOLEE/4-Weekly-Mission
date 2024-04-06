@@ -2,7 +2,6 @@ import { PropsWithChildren, useEffect, useState } from 'react';
 import { getUser } from '@/apis/api';
 import Header from '@/components/layout/header/Header';
 import Footer from '@/components/layout/footer/Footer';
-import { SystemError } from '@/types/err';
 import { User } from '@/types/api';
 
 function Layout({ children }: PropsWithChildren) {
