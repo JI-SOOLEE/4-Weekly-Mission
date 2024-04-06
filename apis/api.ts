@@ -30,7 +30,7 @@ export function getSampleUser() {
 
 export async function getUser(): Promise<User> {
   const response = await getAPI('users/1');
-  const data = response.data[0];
+  const [data] = response.data;
 
   const parsedData = {
     ...data,
