@@ -53,7 +53,7 @@ export async function getUserFolders(): Promise<Folder[]> {
   return parsedData;
 }
 
-export async function getUserLinks(id: number | string): Promise<Link[]> {
+export async function getUserLinks(id: string): Promise<Link[]> {
   const query =
     id === totalFolderId ? 'users/4/links' : `users/4/links?folderId=${id}`;
   const response = await getAPI(query);
