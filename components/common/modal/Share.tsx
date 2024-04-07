@@ -27,7 +27,7 @@ const Share = ({
   useEffect(() => {
     if (status === 'ready' && (window as any).Kakao) {
       if (!(window as any).Kakao.isInitialized()) {
-        (window as any).Kakao.init('8f1f7e5843d6ce8bbd69bc426167fb9b');
+        (window as any).Kakao.init(process.env.NEXT_PUBLIC_KAKAO_KEY);
       }
     }
   }, [status]);
