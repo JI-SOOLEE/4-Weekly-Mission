@@ -14,7 +14,13 @@ const ShareBtn = ({ name, imgUrl, backgroundColor = '' }: ShareBtnProps) => (
         backgroundColor ? styles[backgroundColor] : ''
       }`}
     >
-      <Image src={imgUrl} alt={`${name} 로고`} className={styles.img} fill />
+      <Image
+        src={imgUrl}
+        alt={`${name} 로고`}
+        className={styles.img}
+        width={18}
+        height={18}
+      />
     </div>
     <span className={styles.name}>{name}</span>
   </div>

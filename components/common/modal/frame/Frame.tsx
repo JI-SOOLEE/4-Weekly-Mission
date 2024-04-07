@@ -9,7 +9,7 @@ const Frame = ({ children, onCloseModal }: PropsWithChildren<OnCloseModal>) => {
       e.currentTarget.id === modalBackground ||
       e.currentTarget.id === exitBtnId
     ) {
-      () => onCloseModal;
+      onCloseModal();
     }
   };
 
