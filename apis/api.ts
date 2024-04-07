@@ -28,8 +28,8 @@ export function getSampleUser() {
   return getAPI('sample/user');
 }
 
-export async function getUser(): Promise<User> {
-  const response = await getAPI('users/1');
+export async function getUserById(id: string = '1'): Promise<User> {
+  const response = await getAPI('users/' + id);
   const [data] = response.data;
 
   const parsedData = {
