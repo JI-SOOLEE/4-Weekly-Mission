@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import eyeOn from '@/public/assets/eye-on.svg';
 import eyeOff from '@/public/assets/eye-off.svg';
 interface FormValue {
@@ -10,7 +10,6 @@ interface FormValue {
 
 const Input = () => {
   const {
-    control,
     register,
     handleSubmit,
     formState: { errors },
