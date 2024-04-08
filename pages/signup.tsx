@@ -1,4 +1,4 @@
-import Input from '@/components/common/Form';
+import Input from '@/components/common/form/Form';
 
 const SignUn = () => {
   return <Input />;
