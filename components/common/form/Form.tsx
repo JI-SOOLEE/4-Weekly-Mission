@@ -15,6 +15,7 @@ const Input = () => {
     register,
     handleSubmit,
     formState: { errors },
+    trigger,
   } = useForm<FormValue>();
 
   const onSubmit = (data: FormValue) => {
@@ -44,6 +45,7 @@ const Input = () => {
             },
           })}
           placeholder='이메일을 입력해주세요.'
+          onBlur={() => trigger('email')}
         />
         {errors.email && <p>{errors.email.message}</p>}
       </div>
@@ -53,9 +55,17 @@ const Input = () => {
         <input
           className={Styles.pwInput}
           type={inputType}
-          {...register('password', { required: true })}
+          {...register('password', {
+            required: '비밀번호를 입력해주세요',
+            pattern: {
+              value: /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,25}$/,
+              message: '비밀번호는 영문, 숫자 조합 8자 이상 입력해 주세요.',
+            },
+          })}
           placeholder='비밀번호를 입력해주세요.'
+          onBlur={() => trigger('password')}
         />
+        {errors.password && <p>{errors.password.message}</p>}
         <Image
           className={Styles.eye}
           onClick={handleInputType}
